@@ -1,0 +1,48 @@
+<div class="loading-indicator" *ngIf="show == true">
+  <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+</div>
+
+
+<mat-toolbar color="primary" style="min-height: 55px !important; height: 55px !important;" class="mat-elevation-z6">
+
+  <span class="example-spacer">Demo DApp</span> <br>
+  <small>Your current account address :</small> &nbsp;&nbsp;
+  <div class="text-center">{{accountNumber}}</div>
+
+</mat-toolbar>
+
+<mat-tab-group mat-stretch-tabs>
+  <mat-tab>
+
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">add</mat-icon>
+      Main Balance
+    </ng-template>
+
+    <div class="text-center">
+
+      Your Ether account has a balance of<h3> {{balance}} ETH </h3>
+
+
+
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">list</mat-icon>
+      Asset (NFT, ICO & Others)
+    </ng-template>
+
+    <div class="text-center">
+      Asset details <br><br><br>
+
+      Work in progress . . .
+      <div></div>
+
+    </div>
+
+  </mat-tab>
+</mat-tab-group>
+
+
+<router-outlet></router-outlet>
